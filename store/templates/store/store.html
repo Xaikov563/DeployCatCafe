@@ -1,0 +1,81 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<p style="margin-top: 0%; margin-bottom: 0px; text-align: center; font-size: 70px; color:#5c2123;">✧༺ MENU ༻✧</p>
+<h1 style="margin-bottom: 5px; margin-top: 20px; text-align: center;">✦ DRINKS ✦</h1>
+	<div class="row" style="padding-left: 90px; padding-right: 90px; border-radius: 40px;">
+		
+		<!--DRINKS-->
+		{% for drink in drink %}
+		<div class="col-lg-4">
+			
+			<img class="thumbnail" src="{{drink.imageURL}}">
+			<div class="box-element product">
+				<h6>{{drink.name}}</h6>
+				<hr>
+
+				<div style="display: flex; gap:1em; justify-content: space-between;">
+					<div>
+						<button data-product="{{drink.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+							
+					</div>
+				
+					<h4><strong>${{drink.price}}</strong></h4>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+
+	</div>
+
+	<h1 style="margin-bottom: 5px; margin-top: 70px; text-align: center;">✦ PASTRIES ✦</h1>
+
+	<div class="row" style="padding-left: 90px; padding-right: 90px; border-radius: 40px;">
+		<!--PASTRIES-->
+		{% for pastry in pastry %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{{pastry.imageURL}}">
+			<div class="box-element product">
+				<h6>{{pastry.name}}</h6>
+				<hr>
+
+				<div style="display: flex; gap:1em; justify-content: space-between;">
+					<div>
+						<button data-product="{{pastry.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+							
+					</div>
+				
+					<h4><strong>${{pastry.price}}</strong></h4>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+	<h1 style="margin-bottom: 5px; margin-top: 70px; text-align: center;">✦ COMBOS ✦</h1>
+
+	<div class="row" style="padding-left: 90px; padding-right: 90px; border-radius: 40px;">
+		<!--PASTRIES-->
+		{% for combo in combo %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{{combo.imageURL}}">
+			<div class="box-element product">
+				<h6>{{combo.name}}</h6>
+				<hr>
+
+				<div style="display: flex; gap:1em; justify-content: space-between;">
+					<div>
+						<button data-product="{{combo.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+						
+					</div>
+				
+					<h4><strong>${{combo.price}}</strong></h4>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+		<!--COMBO MEALS-->
+{% endblock content %}
+</html>

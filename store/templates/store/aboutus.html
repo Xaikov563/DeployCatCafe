@@ -1,0 +1,96 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cup of Cats Cafe</title>
+
+    <!-- CSS -->
+    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lobster&family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <main>
+        <section class="hero">
+            <h1 data-aos="fade-up">About Cup of Cats</h1>
+            <p data-aos="fade-up" data-aos-delay="200">The Purrfect Blend of Coffee and Companionship!</p>
+        </section>
+
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mission" data-aos="fade-right">
+                    <h2>Our Mission</h2>
+                    <p>To create a harmonious space where coffee lovers and cat enthusiasts can find joy, comfort, and connection while supporting cat welfare in our community.</p>
+                </div>
+                <div class="vision" data-aos="fade-left">
+                    <h2>Our Vision</h2>
+                    <p>To be the leading cat café that sets the standard for animal welfare, coffee excellence, and community engagement, inspiring similar initiatives worldwide.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container" data-aos="fade-up">
+                <h2>Our Story</h2>
+                <p>Founded in 1970, Cup of Cats began as a dream to combine two passions: exceptional coffee and cat welfare. What started as a small café with three rescue cats has grown into a beloved community hub, having helped over 500 cats find forever homes.</p>
+                <p>Our journey has been one of love, dedication, and countless purrs of approval from both our feline friends and satisfied customers.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="0">
+                    <img src="{% static 'images/coffee.jpg' %}" alt="Coffee" />
+                    <h3>Artisanal Coffee</h3>
+                    <p>Locally roasted, ethically sourced beans prepared by skilled baristas for the perfect cup every time.</p>
+                </div>
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="200">
+                    <img src="{% static 'images/cats.jpg' %}" alt="Cat" />
+                    <h3>Friendly Cats</h3>
+                    <p>Meet our loving rescue cats, each with their own unique personality and story to share.</p>
+                </div>
+                <div class="feature-box" data-aos="fade-up" data-aos-delay="400">
+                    <img src="{% static 'images/pastries.jpg' %}" alt="Pastries" />
+                    <h3>Fresh Pastries</h3>
+                    <p>Handcrafted daily pastries that perfectly complement our coffee selection.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="community-impact">
+            <div class="container" data-aos="fade-up">
+                <h2>Community Impact</h2>
+                <p>Through our adoption program and community events, we've made a significant impact:</p>
+                <ul>
+                    <li>500+ cats adopted</li>
+                    <li>$50,000+ raised for local shelters</li>
+                    <li>1000+ volunteer hours contributed</li>
+                    <li>Weekly educational programs on cat care</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="message">
+            <div class="container" data-aos="fade-up">
+                <h2>A Message from Our Founder</h2>
+                <blockquote>
+                    "Cup of Cats is more than just a café – it's a sanctuary where every purr, every sip, and every smile contributes to making our community a better place for both humans and felines."
+                    <footer>- Xai Alexandrei, Founder</footer>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+    {% endblock content %}
+</body>
+</html>

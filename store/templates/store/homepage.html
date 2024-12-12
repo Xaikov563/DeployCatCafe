@@ -1,0 +1,72 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lobster&family=Titan+One&display=swap" rel="stylesheet">
+    {% block content %}
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+    <main>
+            
+    <section id="home" class="hero">
+        <div class="hero-content slide-up">
+            <h1>Welcome to Cup of Cats Cafe</h1>
+            <p>The Purrfect Blend of Coffee and Companionship!</p>
+            <a href="{% url 'store' %}" class="cta-button">Explore Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu fade-in">
+        <h2>Our Specialties</h2>
+        <div class="menu-grid">
+            <div class="menu-item slide-up">
+                <img src="{% static 'images/1pastries.jpg' %}" alt="Fluff" />
+                <h3>Espresso</h3>
+                <p>Rich and bold Italian espresso</p>
+            </div>
+            <div class="menu-item slide-up">
+                <img src="{% static 'images/1combo.jpg' %}" alt="Combo Meal" />
+                <h3>Café Latte</h3>
+                <p>Smooth espresso with steamed milk</p>
+            </div>
+            <div class="menu-item slide-up">
+                <img src="{% static 'images/2drinks.jpg' %}" alt="Cappuccino" />
+                <h3>Cappuccino</h3>
+                <p>Perfect balance of espresso, milk, and foam</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="home" class="gallerybg">
+        <div class="hero-content slide-up">
+            <h1>Public Gallery</h1>
+            <p>Where memories are captured</p>
+            <a href="{% url 'gallery' %}" class="cta-button">Explore Gallery</a>
+        </div>
+    </section>  
+
+    <section id="about" class="about fade-in">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Welcome to Cup of Cats, where coffee and cats create magic! Our café is a cozy space where you can enjoy a delicious drink, relax with our purring companions, and escape the rush of life. Each cat here has a unique story, and together, we create moments of joy and comfort. Come for the coffee, stay for the cuddles!</p>
+            <a href="{% url 'aboutus' %}" class="cta-button">Learn more about us!</a>
+        </div>
+    </section>
+
+    
+    </main>
+
+    <!-- JAVA SCRIPT -->
+    {% endblock content %}
+</body>
+</html>
