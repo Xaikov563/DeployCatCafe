@@ -1,0 +1,352 @@
+.container{
+    border-radius: 40px;
+
+}
+/* Hero Section */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/bg 1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #f0e6d2;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 20px; /* Add padding to the sections */
+    margin-bottom: 20px; /* Add margin to separate sections */
+}
+
+h2 {
+    color: #a87c6f;
+    margin-bottom: 1rem;
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+.story p {
+    color: #a87c6f;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.story {
+    padding: 50px;
+}
+
+
+/* Mission & Vision */
+.mission-vision {
+    background-color: #f0e6d2;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #a87c6f;
+}
+
+.mission-vision .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+}
+
+.mission, .vision {
+    padding: 2rem;
+    background-color: #f0e6d2;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Features */
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: -100px;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0e6d2;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+}
+
+.feature-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.feature-box h3 {
+    color: #a87c6f;
+    margin-bottom: 1rem;
+}
+
+.feature-box p {
+    color: #a87c6f;
+}
+
+/* Community Impact */
+.community-impact {
+    background-color: #f0e6d2;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: -70px;
+}
+
+.community-impact ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.community-impact p {
+    color: #a87c6f;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 15px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+.community-impact li {
+    background-color: #a87c6f;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+/* Message Section */
+.message {
+    background-color: #f0e6d2;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #a87c6f;
+    font-family: 'Titan One', cursive;
+}
+
+blockquote footer {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #5c2123;;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #f0e6d2;
+    margin: 0 !important; /* Remove any automatic margins */
+    padding: 0 !important; /* Remove any automatic paddings */
+    max-width: 100%; /* Prevent Bootstrap max-width if it's being applied */
+    max-height: 100%;
+    color: #a87c6f;
+    padding: 2rem 20px; /* Reduced padding */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; /* Reduced gap */
+}
+
+.footer-content h3 {
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out; /* Add animation */
+}
+
+.footer-content p, .footer-content ul, .footer-content li {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.footer-content p {
+    animation-delay: 0.2s;
+}
+
+.footer-content ul {
+    animation-delay: 0.4s;
+}
+
+.footer-content li {
+    animation-delay: 0.6s;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 0.8s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hero p {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+section {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+h2 {
+    animation: zoomIn 1s ease-in-out;
+}
+
+.story p {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.mission-vision {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.mission {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.vision {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.features .container {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.feature-box {
+    animation: zoomIn 1s ease-in-out;
+}
+
+.community-impact {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.community-impact ul {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.community-impact li {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.message {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+blockquote {
+    animation: zoomIn 1s ease-in-out;
+}
+
+footer {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.footer-content h3 {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.footer-content p, .footer-content ul, .footer-content li {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.copyright {
+    animation: fadeInRight 1s ease-in-out;
+}

@@ -1,0 +1,55 @@
+
+#gallery {
+    padding: 50px;
+    text-align: center;
+}
+
+#gallery h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 170px;
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    grid-row: span 2;
+}
+
+.gallery-container img:nth-child(3n) {
+    grid-row: span 3;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+/* LIGHTBOX STYLE */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
