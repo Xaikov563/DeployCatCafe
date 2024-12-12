@@ -1,0 +1,48 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <!-- CSS -->{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    {% endblock extra_css %}
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lobster&family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}">
+    <p style="margin-top: 20px; margin-bottom: 20px; text-align: center; font-size: 80px; color:#5c2123;">✧༺ GALLERY ༻✧</p>
+    <main>
+        <section id="gallery">
+            <div class="gallery-container">
+                <img src="{% static 'gallery/1.jpg' %}" alt="Gallery Image 1">
+                <img src="{% static 'gallery/2.jpg' %}" alt="Gallery Image 2">
+                <img src="{% static 'gallery/3.jpg' %}" alt="Gallery Image 3">
+                <img src="{% static 'gallery/4.jpg' %}" alt="Gallery Image 4">
+                <img src="{% static 'gallery/5.jpg' %}" alt="Gallery Image 5">
+                <img src="{% static 'gallery/6.jpg' %}" alt="Gallery Image 6">
+                <img src="{% static 'gallery/7.jpg' %}" alt="Gallery Image 7">
+                <img src="{% static 'gallery/8.jpg' %}" alt="Gallery Image 8">
+                <img src="{% static 'gallery/9.jpg' %}" alt="Gallery Image 9">
+                <img src="{% static 'gallery/10.jpg' %}" alt="Gallery Image 10">
+                <img src="{% static 'gallery/11.jpg' %}" alt="Gallery Image 11">
+                <img src="{% static 'gallery/12.jpg' %}" alt="Gallery Image 12">
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- JAVA SCRIPT -->
+    <script type="text/javascript" src="{% static 'js/gallery.js' %}"></script>
+
+    {% endblock content %}
+</body>
+</html>
