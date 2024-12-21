@@ -2,9 +2,9 @@
 {% load static %}
 {% block content %}
 <html>
-<p style="margin-top: 0%; margin-bottom: 0px; text-align: center; font-size: 70px; color:#5c2123;">✧༺ MENU ༻✧</p>
-<h1 style="margin-bottom: 5px; margin-top: 20px; text-align: center;">✦ DRINKS ✦</h1>
-	<div class="row" style="padding-left: 90px; padding-right: 90px; border-radius: 40px;">
+<p style="margin-top: 0%; margin-bottom: 0px; text-align: center; font-size: clamp(2.5rem, 7vw, 70px); color:#5c2123;">✧༺ MENU ༻✧</p>
+<h1 style="margin-bottom: 5px; margin-top: 20px; text-align: center; font-size: clamp(2rem, 4vw, 40px);">✦ DRINKS ✦</h1>
+	<div class="row" style="border-radius: 40px;">
 		
 		<!--DRINKS-->
 		{% for drink in drink %}
@@ -29,9 +29,9 @@
 
 	</div>
 
-	<h1 style="margin-bottom: 5px; margin-top: 70px; text-align: center;">✦ PASTRIES ✦</h1>
+	<h1 class="combosh1" style="margin-bottom: 5px; margin-top: 70px; text-align: center; font-size: clamp(2rem, 4vw, 40px);" >✦ PASTRIES ✦</h1>
 
-	<div class="row" style="padding-left: 90px; padding-right: 90px; border-radius: 40px;">
+	<div class="row" style="border-radius: 40px;">
 		<!--PASTRIES-->
 		{% for pastry in pastry %}
 		<div class="col-lg-4">
@@ -53,9 +53,9 @@
 		{% endfor %}
 	</div>
 
-	<h1 style="margin-bottom: 5px; margin-top: 70px; text-align: center;">✦ COMBOS ✦</h1>
+	<h1 class="combosh1" style="margin-bottom: 5px; margin-top: 70px; text-align: center; font-size: clamp(2rem, 4vw, 40px);">✦ COMBOS ✦</h1>
 
-	<div class="row" style="padding-left: 90px; padding-right: 90px; border-radius: 40px;">
+	<div class="row" style="border-radius: 40px;">
 		<!--PASTRIES-->
 		{% for combo in combo %}
 		<div class="col-lg-4">
