@@ -11,7 +11,6 @@ html {
 
 body {
     font-family: "Titan One", sans-serif;
-    font-weight: 400;
     font-style: normal;
 }
 
@@ -52,13 +51,6 @@ nav {
     align-items: center;
     padding: 0 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo img {
-    
-}
-
-ul {
 }
 
 .menu {
@@ -120,7 +112,6 @@ ul {
     height: 30px;
     font-family: 'poppins', sans-serif;
     border-radius: 50%; /* Makes it a perfect circle */
-    font-weight: bold;
     font-size: 12px;
     line-height: 25px; /* Centers the text inside the badge */  
     border: 2px solid white; /* Optional: Gives the badge a clean look */
@@ -199,11 +190,15 @@ h1,h2,h3,h4,h5,h6{
 	color:#a87c6f;
 }
 
+h1 .combosh1{
+}
+
 .box-element{
 	box-shadow:hsl(0, 0%, 80%) 0 0 16px;
 	background-color: #fff;
-	border-radius: 4px;
-	padding: 10px;
+    padding: 10px;
+    width: 100%; /* Ensure it takes the full width of its container */
+    margin: auto; /* Centers the box */
 }
 
 .thumbnail{
@@ -236,7 +231,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .row-image{
-	width: 100px;
+	width: auto;
 }
 
 .form-field{
@@ -256,7 +251,6 @@ h1,h2,h3,h4,h5,h6{
 
 .quantity{
 	display: inline-block;
-	font-weight: 700;
 	padding-right:10px;
 	
 
@@ -337,7 +331,9 @@ body {
     padding: 20px;
     background-color: #fefefe;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 0px 0px 0px 0px;
+    margin: 0;
+    width: 100%; /* Full width on mobile screens */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
 }
 
 .btn.btn-success { /*View Button*/
@@ -366,8 +362,9 @@ body {
 }
 
 .row-image{
-    border-radius: 20px;
     margin-left: 30%;
+    width:clamp(30%, 30%, 30%); /*30%*/
+    border-radius: 20px;
 }
 
 .footer{
@@ -450,13 +447,13 @@ body {
         transform: translateY(0);
         opacity: 1;
     }
-}
+}   
 
 nav {
-    animation: fadeIn 1s ease-in-out;
+    animation: slideDown 1s ease-in-out;
 }
 
-nav .menu li {
+.navbar.menu li {
     animation: slideUp 0.5s ease-in-out;
     animation-delay: calc(0.1s * var(--i));
     animation-fill-mode: both;
@@ -562,18 +559,104 @@ nav .menu li:nth-child(5) {
     margin-bottom: 2px;
 }
 
-@media (max-width: 500px) {
-    nav, nav a{
+@media (max-width: 767px) {
+    nav, nav a {
         flex-direction: column;
         align-items: center;
         display: inline-block;
     }
-    
-    nav {
+
+    .cart-row {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .cart-row div {
+        text-align: center; /* Align text in the center for better readability */
+        margin-bottom: 10px; /* Add margin between elements */
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .box-element-cart {
         width: 100%;
+        padding: 10px;
+    }
+
+    .box-element {
+        padding: 15px;
+    }
+
+    .cart-items-text, .cart-row div {
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
     }
 }
 
-.col-lg-4{
-    animation: fadeIn 1s ease-in-out;
+/* Adjustments for mobile screens */
+@media (max-width: 767px) {
+    nav, nav a {
+        flex-direction: column;
+        align-items: center;
+        display: inline-block;
+    }
+
+    .cart-row {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .cart-row div {
+        text-align: center; /* Align text in the center for better readability */
+        margin-bottom: 10px; /* Add margin between elements */
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .box-element-cart {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .box-element {
+        padding: 15px;
+    }
+
+    .cart-items-text, .cart-row div {
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
+    }
 }
+
+@media (max-width: 500px) {
+    .cart-row {
+        display: block; /* Stack all cart row elements in a column */
+    }
+
+    .cart-row div {
+        margin-bottom: 10px; /* Add spacing between each element */
+        font-size: 12px;
+    }
+
+    .row-image {
+        width: 50%; /* Adjust the image size */
+        position: relative;
+        left: 50%;  /* Move it 50% from the left */
+        transform: translateX(-130%); /* Offset it by 50% of its own width */
+    }
+
+    .cart-row .quantity img{
+        font-size: 1rem; /* Adjust font size of quantity */
+        position: relative;
+        top:15px;
+    }
+
+    .cart-row .btn {
+        width: 100%; /* Make buttons full-width */
+    }
+
+}
+
+
