@@ -18,13 +18,13 @@
 }
 
 .hero h1 {
-    font-size: 3.5rem;
     color: #f0e6d2;
     margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: clamp(.5rem, 5vw, 1.5rem);
 }
 
 /* Section Styles */
@@ -41,8 +41,8 @@ h2 {
 }
 
 .story p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
     color: #a87c6f;
-    font-size: 1.5rem;
     padding: 20px;
 }
 
@@ -152,7 +152,7 @@ h2 {
 }
 
 blockquote {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     font-style: italic;
     max-width: 800px;
     margin: 0 auto;
@@ -163,7 +163,7 @@ blockquote {
 
 blockquote footer {
     margin-top: 1rem;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     color: #5c2123;;
     border-radius: 20px;
 }
@@ -349,4 +349,16 @@ footer {
 
 .copyright {
     animation: fadeInRight 1s ease-in-out;
+}
+
+@media (max-width: 700px) {
+    .cta-button{
+        font-size: 1rem;
+    }
+    .hero{
+        max-width: 100%; /* Ensure images scale properly */
+        height: 50vh;
+        margin-bottom: 10px;
+
+    }
 }
