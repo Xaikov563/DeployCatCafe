@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 <html>
-	<p style="margin-top: 10px; margin-bottom: 20px; text-align: center; font-size: 70px; color:#5c2123;">✧༺ MERCHANDISE ༻✧</p>
-	<div class="row" style="padding-left: 90px; padding-right: 90px; border-radius: 40px;">
+	<p style="margin-top: 10px; margin-bottom: 20px; text-align: center; font-size: clamp(1.5rem, 5vw, 70px); color:#5c2123;">✧༺ MERCHANDISE ༻✧</p>
+	<div class="row" style="border-radius: 40px;">
 		
 		{% for merch in merch %}
 		<div class="col-lg-4">
@@ -18,7 +18,7 @@
 						
 					</div>
 				
-					<h4><strong>${{merch.price}}</strong></h4>
+					<h4>${{merch.price}}</h4>
 				</div>
 			</div>
 		</div>
