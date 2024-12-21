@@ -1,56 +1,36 @@
-.content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: #f0e6d2; /* Slightly darker background */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.container {
-    margin: 0 !important; /* Remove any automatic margins */
-    padding: 0 !important; /* Remove any automatic paddings */
-    max-width: 100%; /* Prevent Bootstrap max-width if it's being applied */
-    max-height: 100%;
-
-}
-
-.hero{
-    bottom: 60px;
+.hero {
     position: relative;
-    background: url("/images/bg.jpg") no-repeat center center/cover;
-    height: 100vh;
-    margin-top: 0; /* Ensure no margin at the top */
-    padding: 0;
-    position: relative;
+    background: url('/images/bg.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    margin-top: none;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    
 }
 
-.gallerybg{
-    bottom: 60px;
+.about {
     position: relative;
-    background: url("/images/backgroundgallery.jpg") no-repeat center center/cover;
-    height: 100vh;
-    margin-top: 0; /* Ensure no margin at the top */
-    padding: 0;
-    position: relative;
-    height: 100vh;
     display: flex;
-    margin-top: none;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    
 }
 
-.hero::before, .gallerybg::before {
+.about p {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero h1{
+    color: #f0e6d2;
+
+}
+
+
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -70,15 +50,17 @@
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 30px;
-    color: #f0e6d2;
     font-family: 'Titan One', cursive;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .hero-content p {
     font-size: 2rem;
+    margin:20px;
     margin-bottom: 20px;
     font-family: 'Titan One', cursive;
     color: white;
+    font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .cta-button {
@@ -95,8 +77,8 @@
 
 .cta-button:hover {
     background-color: #a87c6f;
-    color: white;
     text-decoration: none;
+    color: #f0e6d2;
 }
 
 .menu {
@@ -105,36 +87,22 @@
 
 .menu-grid {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    justify-content: space-evenly; /* Even spacing between items */
-    align-items: flex-start; /* Align items to the top */
-    gap: 20px; /* Add space between items */
-    margin-bottom: 30px;
-    margin-right: 10px;
+    gap: 20px;
+    justify-content: center;
 }
 
-.menu p{
-    margin-left: 50px;
-    margin-right: 40px;
-
-}
 .menu-item {
-    width: 400px; /* Fixed width for uniformity */
     text-align: center;
-    padding: 20px;
     color: #a87c6f;
     font-size: 1.1rem;
-    box-sizing: border-box; /* Ensure padding doesn't overflow */
+    
 }
 
-.menu-item h3{
-    margin-top: 30px;
-} 
-
 .menu-item img {
-    width: 300px;
-    height: 300px;
+    width: 70%; /* Set the image width to 70% of its container */
+    height: auto; /* Maintain the aspect ratio */
     border-radius: 10px;
+    object-fit: cover; /* Ensures the image fits well within the container */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -155,7 +123,6 @@
 .about {
     padding: 50px 20px;
     background-color: #fdf6e3;
-    margin-bottom: 60px;
 }
 
 .about h2 {
@@ -170,8 +137,6 @@
     font-size: 1.2rem;
     margin-bottom: 20px;
     margin-top: 25px;
-    margin-left: 20%;
-    margin-right: 20%;
     font-family: 'Titan One', cursive;
     color: #a87c6f;
 }
@@ -179,7 +144,6 @@
 .contact {
     padding: 25px 20px;
     background-color: #f0e6d2;
-    margin: none;
 }
 
 .contact h2 {
@@ -219,18 +183,70 @@
     margin-bottom: 2px;
 }
 
-@media (max-width: 800px) {
-    .menu-grid {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
+/* General styles for the menu section */
+.menu {
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    gap: 20px;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 700px) {
+    .cta-button{
+        font-size: 1rem;
     }
-    
+    .hero{
+        max-width: 100%; /* Ensure images scale properly */
+        height: 50vh;
+        margin-bottom: 10px;
+    }
+    .menu-grid {
+        grid-template-columns: 1fr; /* Stack items vertically */
+    }
+
     .menu-item {
-        width: 100%; /* Make items span full width */
+        padding: 10px;
+    }
+
+    .menu-item img {
+        max-width: 100%; /* Ensure images scale properly */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .menu-item h3 {
+        font-size: 1.2em; /* Adjust font size */
+    }
+
+    .menu-item p {
+        font-size: 1em; /* Adjust font size */
     }
 }
 
-.about a{
-    position: relative;
-    left: 40%;
+@media (max-height: 900px) {
+    .menu {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .menu-grid {
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .menu-item {
+        padding: 5px;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container, .menu, .menu-grid, .hero {
+    max-width: 100%; /* Ensure elements don't exceed the viewport width */
+    margin: 0 auto;  /* Center content if necessary */
 }
