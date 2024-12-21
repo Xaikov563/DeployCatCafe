@@ -17,7 +17,7 @@
 <body>
     <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
     <main>
-            
+    
     <section id="home" class="hero">
         <div class="hero-content slide-up">
             <h1>Welcome to Cup of Cats Cafe</h1>
@@ -26,8 +26,9 @@
         </div>
     </section>
 
+    
     <section id="menu" class="menu fade-in">
-        <h2>Our Specialties</h2>
+        <h2 style="margin-top: 50px;">Our Specialties</h2>
         <div class="menu-grid">
             <div class="menu-item slide-up">
                 <img src="{% static 'images/1pastries.jpg' %}" alt="Fluff" />
@@ -47,22 +48,21 @@
         </div>
     </section>
 
-    <section id="home" class="gallerybg">
+    <section id="home" class="hero">
         <div class="hero-content slide-up">
-            <h1>Public Gallery</h1>
-            <p>Where memories are captured</p>
+            <h1>Gallery</h1>
+            <p>Where Memories are captured</p>
             <a href="{% url 'gallery' %}" class="cta-button">Explore Gallery</a>
         </div>
-    </section>  
+    </section> 
 
-    <section id="about" class="about fade-in">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>Welcome to Cup of Cats, where coffee and cats create magic! Our café is a cozy space where you can enjoy a delicious drink, relax with our purring companions, and escape the rush of life. Each cat here has a unique story, and together, we create moments of joy and comfort. Come for the coffee, stay for the cuddles!</p>
-            <a href="{% url 'aboutus' %}" class="cta-button">Learn more about us!</a>
+    <section id="home" class="about">
+        <div class="hero-content slide-up">
+            <h1>About Us</h1>
+            <p style="margin-bottom: 50px;">Welcome to Cup of Cats, where coffee and cats create magic! Our café is a cozy space where you can enjoy a delicious drink, relax with our purring companions, and escape the rush of life. Each cat here has a unique story, and together, we create moments of joy and comfort. Come for the coffee, stay for the cuddles!</p>
+            <a href="{% url 'aboutus' %}" class="cta-button">Learn More About Us!</a>
         </div>
-    </section>
-
+    </section> 
     
     </main>
 
